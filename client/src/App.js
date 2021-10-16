@@ -19,11 +19,19 @@ function App() {
       <Contain>
         <NavigationBar />
         <Switch>
-          <Route exact path={"/"} render={(props) => <Home {...props} />} />
-          <Route path={"/projects"} component={Projects} />
-          <Route path={"/projects"} component={Projects} />
-          <Route path={"/about"} component={AboutMe} />
-          <Route path={"/contact"} component={Contact} />
+          {/* <Route exact path={"/"} render={(props) => <Home {...props} />} /> */}
+          <Route exact path={"/"}>
+            <Home />
+          </Route>
+          <Route path={"/projects"}>
+            <Projects />
+          </Route>
+          <Route path={"/about"}>
+            <AboutMe />
+          </Route>
+          <Route path={"/contact"}>
+            <Contact />
+          </Route>
         </Switch>
         <Footer />
       </Contain>

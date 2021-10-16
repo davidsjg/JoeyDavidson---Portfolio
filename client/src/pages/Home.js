@@ -3,10 +3,13 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-export default function Home() {
+//CSS
+import styles from "./Home.module.css";
+
+export default function Home(props) {
   return (
     <>
-      <Container>
+      <Container contain="mainContain" className={styles["mainContain"]}>
         <Row>
           <Col sm={12}>Header</Col>
         </Row>
