@@ -6,8 +6,8 @@ import Container from "react-bootstrap/Container";
 export default function NavigationBar() {
   return (
     <>
-      <Navbar bg="light" variant="light">
-        <Container>
+      <Navbar bg="light">
+        <Container style={{ backgroundColor: "lightgrey", borderRadius: 5 }}>
           <Navbar.Brand href="#home">Navbar</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>

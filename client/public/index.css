@@ -1,0 +1,12 @@
+/* Home.js */
+.projectCard {
+  text-align: center;
+  height: 500px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* display: block; */
+}
+
+.colProj {
+  justify-content: center;
+}

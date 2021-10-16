@@ -6,17 +6,26 @@ import Col from "react-bootstrap/Col";
 //CSS
 import styles from "./Home.module.css";
 
-export default function Home(props) {
+//Components
+import ProjectCard from "../components/ProjectCard/ProjectCard";
+
+export default function Home() {
   return (
     <>
-      <Container contain="mainContain" className={styles["mainContain"]}>
+      <Container className={styles["mainContain"]}>
         <Row>
           <Col sm={12}>Header</Col>
         </Row>
         <Row>
-          <Col sm={4}>Proj1</Col>
-          <Col sm={4}>Proj2</Col>
-          <Col sm={4}>Proj3</Col>
+          <Col className={styles["colProj"]} sm={4}>
+            <ProjectCard cName="projectCard" />
+          </Col>
+          <Col className={styles["colProj"]} sm={4}>
+            <ProjectCard cName="projectCard" />
+          </Col>
+          <Col className={styles["colProj"]} sm={4}>
+            <ProjectCard cName="projectCard" />
+          </Col>
         </Row>
       </Container>
     </>
