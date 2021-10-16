@@ -11,7 +11,7 @@ import Contact from "../src/pages/Contact";
 //imported components
 import Contain from "./components/Contain/Contain";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
-import Footer from "./components/Footer/Footer";
+// import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -33,7 +33,7 @@ function App() {
             <Contact />
           </Route>
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </Contain>
     </Router>
   );

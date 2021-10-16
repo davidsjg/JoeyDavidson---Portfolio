@@ -1,11 +1,16 @@
 /* Home.js */
 .projectCard {
   text-align: center;
-  height: 500px;
+
   margin-top: 20px;
   margin-bottom: 20px;
   /* display: block; */
   margin: 0 auto; /* Added */
   float: none; /* Added */
   margin-bottom: 10px; /* Added */
+}
+
+.pageHeader {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
