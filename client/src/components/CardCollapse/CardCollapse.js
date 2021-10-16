@@ -11,6 +11,7 @@ export default function CardCollapse() {
         onClick={() => setOpen(!open)}
         aria-controls="example-collapse-text"
         aria-expanded={open}
+        variant="secondary"
       >
         click
       </Button>

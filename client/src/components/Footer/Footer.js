@@ -14,8 +14,13 @@ export default function NavigationBar() {
           }}
         >
           <Navbar.Toggle />
-          <Navbar.Collapse className="justify-content-end">
+          <Navbar.Collapse className="justify-content-center">
             <Navbar.Text>Copyright Joey Davidson, 2021</Navbar.Text>
+          </Navbar.Collapse>
+          <Navbar.Collapse className="justify-content-center">
+            <Navbar.Text>
+              <a href="mailto: j.davidson18@gmail.com">Email Me</a>
+            </Navbar.Text>
           </Navbar.Collapse>
         </Container>
       </Navbar>
