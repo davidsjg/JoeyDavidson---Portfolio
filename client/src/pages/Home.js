@@ -17,7 +17,11 @@ export default function Home() {
           <Col sm={12}>Header</Col>
         </Row>
         <Row>
-          <Col className={styles["colProj"]} sm={4}>
+          <Col
+            className="d-flex justify-content-center"
+            className={styles["colProj"]}
+            sm={4}
+          >
             <ProjectCard cName="projectCard" />
           </Col>
           <Col className={styles["colProj"]} sm={4}>
