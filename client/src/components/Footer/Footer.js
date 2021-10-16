@@ -1,19 +1,24 @@
 import React from "react";
-import AppBar from "@mui/material/AppBar";
-import Container from "@mui/material/Container";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import Container from "react-bootstrap/Container";
 
-export default function Footer() {
+export default function NavigationBar() {
   return (
-    <AppBar position="static" style={{ backgroundColor: "lightgrey" }}>
-      <Container maxWidth="md">
-        <Toolbar>
-          <Typography variant="body1" color="inherit">
-            © 2019 Gistia
-          </Typography>
-        </Toolbar>
-      </Container>
-    </AppBar>
+    <>
+      <Navbar bg="light">
+        <Container
+          style={{
+            backgroundColor: "lightgrey",
+            borderRadius: 5,
+          }}
+        >
+          <Navbar.Toggle />
+          <Navbar.Collapse className="justify-content-end">
+            <Navbar.Text>Copyright Joey Davidson, 2021</Navbar.Text>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </>
   );
 }
