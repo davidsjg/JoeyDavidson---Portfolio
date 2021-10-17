@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import "./App.css";
 
 //imported pages
@@ -13,31 +13,19 @@ import Contain from "./components/Contain/Contain";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
 import Footer from "./components/Footer/Footer";
 
-function App() {
+const App = () => {
   return (
-    <Router>
-      <Contain>
-        <NavigationBar />
-        <Switch>
-          {/* <Route exact path={"/"} render={(props) => <Home {...props} />} /> */}
-          <Route exact path={"/"}>
-            <Home />
-          </Route>
-          <Route path={"/projects"}>
-            <Projects />
-          </Route>
-          <Route path={"/about"}>
-            <AboutMe />
-          </Route>
-          <Route path={"/contact"}>
-            <Contact />
-          </Route>
-        </Switch>
-        {/* <Footer /> */}
-        <Footer />
-      </Contain>
-    </Router>
+    <div className="App">
+      <NavigationBar />
+      <Switch>
+        <Route exact path={"/"} component={Home} />
+        <Route exact path={"/projects"} component={Projects} />
+        <Route exact path={"/about"} component={AboutMe} />
+        <Route exact path={"/contact"} component={Contact} />
+      </Switch>
+      <Footer />
+    </div>
   );
-}
+};
 
 export default App;

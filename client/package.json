@@ -9,12 +9,16 @@
     "@mui/material": "^5.0.4",
     "axios": "^0.18.0",
     "bootstrap": "^5.1.1",
+    "persist": "^0.2.7",
     "react": "^16.13.1",
     "react-bootstrap": "^2.0.0-rc.1",
     "react-dom": "^16.13.1",
     "react-native": "^0.65.1",
+    "react-redux": "^7.2.5",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "redux": "^4.1.1",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",

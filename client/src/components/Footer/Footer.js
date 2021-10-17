@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 
 export default function NavigationBar() {
@@ -19,7 +18,12 @@ export default function NavigationBar() {
           </Navbar.Collapse>
           <Navbar.Collapse className="justify-content-center">
             <Navbar.Text>
-              <a href="mailto: j.davidson18@gmail.com">Email Me</a>
+              <a
+                href="mailto: j.davidson18@gmail.com"
+                style={{ color: "grey" }}
+              >
+                Email Me
+              </a>
             </Navbar.Text>
           </Navbar.Collapse>
         </Container>
