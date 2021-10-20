@@ -1,9 +1,11 @@
-const projectReducer = (state = "New Project", action) => {
+const initialState = [{ project: "PROJECT 1 BROH" }, { count: 0 }];
+
+const projectReducer = (state = initialState, action) => {
   const { type, payload } = action;
 
-  switch (action.type) {
+  switch (type) {
     case "SET_PROJECT":
-      return { ...state, project: payload };
+      return state + 1;
 
     default:
       return state;
