@@ -5,6 +5,7 @@ import App from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createStore } from "redux";
 import allReducers from "./reducers";
+import { Provider } from "react-redux";
 
 const store = createStore(
   allReducers,
@@ -12,7 +13,9 @@ const store = createStore(
 );
 
 ReactDOM.render(
-  <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
 
   document.getElementById("root")
 );

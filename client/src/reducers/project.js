@@ -1,4 +1,4 @@
-const projectReducer = (state = 0, action) => {
+const projectReducer = (state = "New Project", action) => {
   const { type, payload } = action;
 
   switch (action.type) {
