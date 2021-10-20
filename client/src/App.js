@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 
 //imported pages
@@ -15,7 +15,7 @@ import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
-    <div className="App">
+    <Router>
       <NavigationBar />
       <Switch>
         <Route exact path={"/"} component={Home} />
@@ -24,7 +24,7 @@ const App = () => {
         <Route exact path={"/contact"} component={Contact} />
       </Switch>
       <Footer />
-    </div>
+    </Router>
   );
 };
 
