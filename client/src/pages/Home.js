@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+//Bootstrap
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -8,8 +10,15 @@ import styles from "./Home.module.css";
 
 //Components
 import ProjectCard from "../components/ProjectCard/ProjectCard";
+import API from "../utils/API";
 
 export default function Home() {
+  useEffect(() => {
+    API.getProjects().then((project) => {
+      console.log(project);
+    });
+  }, []);
+
   return (
     <>
       <Container className={styles["mainContain"]}>
