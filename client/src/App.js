@@ -16,14 +16,26 @@ import Footer from "./components/Footer/Footer";
 const App = () => {
   return (
     <Router>
-      <NavigationBar />
-      <Switch>
-        <Route exact path={"/"} component={Home} />
-        <Route exact path={"/projects"} component={Projects} />
-        <Route exact path={"/about"} component={AboutMe} />
-        <Route exact path={"/contact"} component={Contact} />
-      </Switch>
-      <Footer />
+      <Contain>
+        <NavigationBar />
+        <Switch>
+          {/* <Route exact path={"/"} render={(props) => <Home {...props} />} /> */}
+          <Route exact path={"/"}>
+            <Home />
+          </Route>
+          <Route path={"/projects"}>
+            <Projects />
+          </Route>
+          <Route path={"/about"}>
+            <AboutMe />
+          </Route>
+          <Route path={"/contact"}>
+            <Contact />
+          </Route>
+        </Switch>
+
+        <Footer />
+      </Contain>
     </Router>
   );
 };

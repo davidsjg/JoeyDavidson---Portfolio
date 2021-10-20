@@ -20,13 +20,13 @@ export default function Home() {
         </Row>
         <Row>
           <Col className={styles["colProj"]} sm={4}>
-            <ProjectCard cName="projectCard" />
+            <ProjectCard cname="projectCard" />
           </Col>
           <Col className={styles["colProj"]} sm={4}>
-            <ProjectCard cName="projectCard" />
+            <ProjectCard cname="projectCard" />
           </Col>
           <Col className={styles["colProj"]} sm={4}>
-            <ProjectCard cName="projectCard" />
+            <ProjectCard cname="projectCard" />
           </Col>
         </Row>
       </Container>

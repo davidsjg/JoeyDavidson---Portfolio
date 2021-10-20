@@ -6,7 +6,7 @@ export default function ProjectCard(props) {
   return (
     <Card
       style={{ width: "18rem", backgroundColor: "lightgray" }}
-      className={`${props.cName} .mx-auto`}
+      className={`${props.cname} .mx-auto`}
     >
       <Card.Img variant="top" src="https://i.imgur.com/FwYTuY3.jpeg" />
       <Card.Body>
