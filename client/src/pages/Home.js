@@ -19,7 +19,8 @@ export default function Home() {
 
   useEffect(() => {
     API.getProjects().then((project) => {
-      console.log(project);
+      console.log(project.data);
+      dispatch(setProject(project.data));
     });
   }, []);
 

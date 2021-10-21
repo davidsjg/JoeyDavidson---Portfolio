@@ -7,6 +7,9 @@ import { setProject } from "../../actions";
 export default function CardCollapse() {
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
+  const project = useSelector((state) => state.project);
+
+  console.log(project);
 
   function handleClick(e) {
     e.preventDefault();
