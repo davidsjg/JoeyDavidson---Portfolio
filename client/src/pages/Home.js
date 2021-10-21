@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { setProject } from "../actions";
 
 //Bootstrap
 import Container from "react-bootstrap/Container";
@@ -13,11 +15,22 @@ import ProjectCard from "../components/ProjectCard/ProjectCard";
 import API from "../utils/API";
 
 export default function Home() {
+  const dispatch = useDispatch();
+
   useEffect(() => {
     API.getProjects().then((project) => {
       console.log(project);
     });
   }, []);
+
+  function handleClick(e) {
+    e.preventDefault();
+    // const newProj = userInput.current.value;
+
+    // localCount = localCount + 1;
+
+    // dispatch(setProject(newProj));
+  }
 
   return (
     <>

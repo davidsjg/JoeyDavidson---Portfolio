@@ -5,13 +5,23 @@ import Collapse from "react-bootstrap/Collapse";
 export default function CardCollapse() {
   const [open, setOpen] = useState(false);
 
+  function handleClick(e) {
+    e.preventDefault();
+    console.log(e.target.value);
+
+    setOpen(!open);
+
+    // dispatch(setProject(newProj));
+  }
+
   return (
     <>
       <Button
-        onClick={() => setOpen(!open)}
+        onClick={handleClick}
         aria-controls="example-collapse-text"
         aria-expanded={open}
         variant="secondary"
+        value="project1"
       >
         click
       </Button>
