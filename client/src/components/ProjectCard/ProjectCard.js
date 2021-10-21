@@ -10,7 +10,7 @@ function ProjectCard(props) {
   // const dispatch = useDispatch();
   // const project = useSelector((state) => state.project);
 
-  console.log(props.project1.project[0]);
+  let tempProj = props.project;
 
   // const allProjects = project.project;
 
@@ -21,7 +21,7 @@ function ProjectCard(props) {
     >
       <Card.Img variant="top" src="https://i.imgur.com/FwYTuY3.jpeg" />
       <Card.Body>
-        <Card.Title>project1</Card.Title>
+        <Card.Title>{tempProj.title}</Card.Title>
         <CardCollapse />
       </Card.Body>
     </Card>
@@ -29,6 +29,7 @@ function ProjectCard(props) {
 }
 
 const mapStateToProps = function (state) {
+  console.log(state.project.project[0]);
   return {
     project1: state.project,
   };

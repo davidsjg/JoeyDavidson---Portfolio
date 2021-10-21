@@ -27,6 +27,24 @@ export default function Home() {
     // dispatch(setProject(newProj));
   }
 
+  let tempArr = [
+    {
+      title: "About Me",
+      data: "Born in Colorado, I grew up with an affinity to the outdoors.  Fishing...",
+      img: "https://imgur.com/0rx1Hwy",
+    },
+    {
+      title: "Contact Me",
+      data: "Click here to contact me!",
+      img: "https://imgur.com/0rx1Hwy",
+    },
+    {
+      title: "Portolio Page",
+      data: "Want to see my sick projects?",
+      img: "https://imgur.com/0rx1Hwy",
+    },
+  ];
+
   return (
     <>
       <button onClick={handleClick}>CLICK ME</button>
@@ -37,7 +55,21 @@ export default function Home() {
           </Col>
         </Row>
         <Row>
-          <Col className={styles["colProj"]} sm={4}>
+          {tempArr.map((project, index) => {
+            return (
+              <Col key={project.id} className={styles["colProj"]} sm={4}>
+                <ProjectCard
+                  key={index}
+                  cname="projectCard"
+                  project={project}
+                />
+              </Col>
+            );
+          })}
+          {/* <Col className={styles["colProj"]} sm={4}>
+            <ProjectCard cname="projectCard" />
+          </Col> */}
+          {/* <Col className={styles["colProj"]} sm={4}>
             <ProjectCard cname="projectCard" project1={project.project[0]} />
           </Col>
           <Col className={styles["colProj"]} sm={4}>
@@ -45,7 +77,7 @@ export default function Home() {
           </Col>
           <Col className={styles["colProj"]} sm={4}>
             <ProjectCard cname="projectCard" />
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </>
