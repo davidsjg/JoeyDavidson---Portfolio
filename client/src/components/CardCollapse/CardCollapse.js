@@ -1,17 +1,21 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
+import { setProject } from "../../actions";
 
 export default function CardCollapse() {
   const [open, setOpen] = useState(false);
+  const dispatch = useDispatch();
 
   function handleClick(e) {
     e.preventDefault();
     console.log(e.target.value);
+    let tempProj = e.target.value;
 
     setOpen(!open);
 
-    // dispatch(setProject(newProj));
+    dispatch(setProject(tempProj));
   }
 
   return (
