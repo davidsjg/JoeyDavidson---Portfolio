@@ -4,10 +4,12 @@ import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
 import { setProject } from "../../actions";
 
-export default function CardCollapse() {
+export default function CardCollapse(props) {
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
   const project = useSelector((state) => state.project);
+
+  let selectedProject = props.props.project;
 
   function handleClick(e) {
     e.preventDefault();
@@ -31,11 +33,7 @@ export default function CardCollapse() {
         click
       </Button>
       <Collapse in={open}>
-        <div id="example-collapse-text">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-          terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-          labore wes anderson cred nesciunt sapiente ea proident.
-        </div>
+        <div id="example-collapse-text">{selectedProject.data}</div>
       </Collapse>
     </>
   );

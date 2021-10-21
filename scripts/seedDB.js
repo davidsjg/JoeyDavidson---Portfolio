@@ -7,7 +7,7 @@ const projectSeed = [
   {
     title: "About Me",
     data: "Born in Colorado, I grew up with an affinity to the outdoors.  Fishing...",
-    img: "https://imgur.com/0rx1Hwy",
+    img: "../client/public/images/",
   },
   {
     title: "Contact Me",

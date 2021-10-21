@@ -10,12 +10,16 @@ import styles from "./Home.module.css";
 //Components
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 import API from "../utils/API";
+//Images
+import image1 from "./IMG_5307.JPG";
+import image2 from "./IMG_6077.JPG";
+import image3 from "./IMG_8019.JPG";
 
 export default function Home() {
   const dispatch = useDispatch();
   const project = useSelector((state) => state.project);
 
-  console.log(project.project);
+  let allProjects = project.project;
 
   function handleClick(e) {
     e.preventDefault();
@@ -29,25 +33,25 @@ export default function Home() {
 
   let tempArr = [
     {
-      title: "About Me",
-      data: "Born in Colorado, I grew up with an affinity to the outdoors.  Fishing...",
-      img: "https://imgur.com/0rx1Hwy",
-    },
-    {
       title: "Contact Me",
       data: "Click here to contact me!",
-      img: "https://imgur.com/0rx1Hwy",
+      img: image1,
+    },
+    {
+      title: "About Me",
+      data: "Born in Colorado, I grew up with an affinity to the outdoors.  Fishing...",
+      img: image2,
     },
     {
       title: "Portolio Page",
       data: "Want to see my sick projects?",
-      img: "https://imgur.com/0rx1Hwy",
+      img: image3,
     },
   ];
 
   return (
     <>
-      <button onClick={handleClick}>CLICK ME</button>
+      {/* <button onClick={handleClick}>CLICK ME</button> */}
       <Container className={styles["mainContain"]}>
         <Row>
           <Col sm={12} className="d-flex justify-content-center">
@@ -66,18 +70,19 @@ export default function Home() {
               </Col>
             );
           })}
-          {/* <Col className={styles["colProj"]} sm={4}>
-            <ProjectCard cname="projectCard" />
-          </Col> */}
-          {/* <Col className={styles["colProj"]} sm={4}>
-            <ProjectCard cname="projectCard" project1={project.project[0]} />
-          </Col>
-          <Col className={styles["colProj"]} sm={4}>
-            <ProjectCard cname="projectCard" />
-          </Col>
-          <Col className={styles["colProj"]} sm={4}>
-            <ProjectCard cname="projectCard" />
-          </Col> */}
+
+          {/* {tempArr.length > 0 &&
+            allProjects.map((project, index) => {
+              return (
+                <Col key={project.id} className={styles["colProj"]} sm={4}>
+                  <ProjectCard
+                    key={index}
+                    cname="projectCard"
+                    project={project}
+                  />
+                </Col>
+              );
+            })} */}
         </Row>
       </Container>
     </>

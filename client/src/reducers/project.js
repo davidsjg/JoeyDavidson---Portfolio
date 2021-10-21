@@ -1,4 +1,4 @@
-const initialState = { project: "PROJECT 1 BROH", count: 0 };
+const initialState = { project: ["PROJECT 1 BROH"], count: 0 };
 
 const projectReducer = (state = initialState, { type, payload }) => {
   switch (type) {

@@ -10,7 +10,7 @@ function ProjectCard(props) {
   // const dispatch = useDispatch();
   // const project = useSelector((state) => state.project);
 
-  let tempProj = props.project;
+  let selectedProject = props.project;
 
   // const allProjects = project.project;
 
@@ -19,17 +19,16 @@ function ProjectCard(props) {
       style={{ width: "18rem", backgroundColor: "lightgray" }}
       className={`${props.cname} .mx-auto`}
     >
-      <Card.Img variant="top" src="https://i.imgur.com/FwYTuY3.jpeg" />
+      <Card.Img variant="top" src={selectedProject.img} />
       <Card.Body>
-        <Card.Title>{tempProj.title}</Card.Title>
-        <CardCollapse />
+        <Card.Title>{selectedProject.title}</Card.Title>
+        <CardCollapse props={props} />
       </Card.Body>
     </Card>
   );
 }
 
 const mapStateToProps = function (state) {
-  console.log(state.project.project[0]);
   return {
     project1: state.project,
   };
