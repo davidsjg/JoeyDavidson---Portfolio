@@ -1,6 +1,4 @@
 export const setProject = (data) => {
-  console.log(data);
-
   return {
     type: "SET_PROJECT",
     payload: data,

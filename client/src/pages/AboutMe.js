@@ -8,8 +8,6 @@ export default function AboutMe() {
   const dispatch = useDispatch();
   let localCount = 0;
 
-  console.log(project);
-
   function handleClick(e) {
     e.preventDefault();
     const newProj = userInput.current.value;

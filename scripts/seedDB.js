@@ -11,12 +11,12 @@ const projectSeed = [
   },
   {
     title: "Contact Me",
-    data: "Born in Colorado, I grew up with an affinity to the outdoors.  Fishing...",
+    data: "Click here to contact me!",
     img: "https://imgur.com/0rx1Hwy",
   },
   {
     title: "Portolio Page",
-    data: "Born in Colorado, I grew up with an affinity to the outdoors.  Fishing...",
+    data: "Want to see my sick projects?",
     img: "https://imgur.com/0rx1Hwy",
   },
 ];

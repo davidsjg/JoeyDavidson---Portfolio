@@ -9,11 +9,9 @@ export default function CardCollapse() {
   const dispatch = useDispatch();
   const project = useSelector((state) => state.project);
 
-  console.log(project);
-
   function handleClick(e) {
     e.preventDefault();
-    console.log(e.target.value);
+
     let tempProj = e.target.value;
 
     setOpen(!open);
