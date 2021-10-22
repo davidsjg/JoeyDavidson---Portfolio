@@ -11,15 +11,20 @@ function ProjectCard(props) {
   // const project = useSelector((state) => state.project);
 
   let selectedProject = props.project;
-
-  // const allProjects = project.project;
+  console.log(selectedProject.img);
 
   return (
     <Card
       style={{ width: "18rem", backgroundColor: "lightgray" }}
       className={`${props.cname} .mx-auto`}
     >
-      <Card.Img variant="top" src={selectedProject.img} />
+      {selectedProject.img ? (
+        <Card.Img variant="top" src={selectedProject.img} />
+      ) : (
+        <i className="fa fa-spinner fa-spin" aria-hidden="true" />
+      )}
+
+      {/* <Card.Img variant="top" src={selectedProject.img} /> */}
       <Card.Body>
         <Card.Title>{selectedProject.title}</Card.Title>
         <CardCollapse props={props} />

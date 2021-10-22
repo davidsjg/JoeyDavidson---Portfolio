@@ -39,12 +39,12 @@ export default function Home() {
     },
     {
       title: "About Me",
-      data: "Born in Colorado, I grew up with an affinity to the outdoors.  Fishing...",
+      data: "Born in Colorado, I grew up with an affinity for the outdoors.  Click here to read more about me!",
       img: image2,
     },
     {
       title: "Portolio Page",
-      data: "Want to see my sick projects?",
+      data: "Click here to see my projects!",
       img: image3,
     },
   ];
