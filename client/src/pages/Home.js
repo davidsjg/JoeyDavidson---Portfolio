@@ -5,6 +5,7 @@ import { setProject } from "../actions";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
 //CSS
 import styles from "./Home.module.css";
 //Components
@@ -30,23 +31,26 @@ export default function Home() {
 
     // dispatch(setProject(newProj));
   }
+  function handleClick2(e) {
+    e.preventDefault();
+  }
 
   let tempArr = [
     {
       title: "Contact Me",
-      data: "Click here to contact me!",
+      data: "Click to contact me!",
       img: image1,
       link: "/contact",
     },
     {
       title: "About Me",
-      data: "Born in Colorado, I grew up with an affinity for the outdoors.  Click here to read more about me!",
+      data: "Click to learn more about me!",
       img: image2,
       link: "/about",
     },
     {
       title: "Portolio Page",
-      data: "Click here to see my projects!",
+      data: "Click to view my portfolio page!",
       img: image3,
       link: "/projects",
     },

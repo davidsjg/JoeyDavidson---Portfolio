@@ -40,14 +40,18 @@ export default function CardCollapse(props) {
       <Collapse in={open}>
         <div id="example-collapse-text">
           {selectedProject.data}
-          <Button
+          <br />
+          <a href={selectedProject.link}>Explore More!</a>
+          {/* <Button
             value={selectedProject.title}
             // onClick={handleClick2}
             variant="secondary"
             href={selectedProject.link}
           >
-            Explore More!
-          </Button>
+            <>
+
+            </>
+          </Button> */}
         </div>
       </Collapse>
     </>
