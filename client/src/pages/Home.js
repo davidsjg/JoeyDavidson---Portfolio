@@ -36,16 +36,19 @@ export default function Home() {
       title: "Contact Me",
       data: "Click here to contact me!",
       img: image1,
+      link: "/contact",
     },
     {
       title: "About Me",
       data: "Born in Colorado, I grew up with an affinity for the outdoors.  Click here to read more about me!",
       img: image2,
+      link: "/about",
     },
     {
       title: "Portolio Page",
       data: "Click here to see my projects!",
       img: image3,
+      link: "/projects",
     },
   ];
 
@@ -70,19 +73,6 @@ export default function Home() {
               </Col>
             );
           })}
-
-          {/* {tempArr.length > 0 &&
-            allProjects.map((project, index) => {
-              return (
-                <Col key={project.id} className={styles["colProj"]} sm={4}>
-                  <ProjectCard
-                    key={index}
-                    cname="projectCard"
-                    project={project}
-                  />
-                </Col>
-              );
-            })} */}
         </Row>
       </Container>
     </>

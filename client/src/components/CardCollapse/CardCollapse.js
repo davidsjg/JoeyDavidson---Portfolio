@@ -9,16 +9,21 @@ export default function CardCollapse(props) {
   const dispatch = useDispatch();
   const project = useSelector((state) => state.project);
 
+  console.log(props.props.project);
+
   let selectedProject = props.props.project;
 
   function handleClick(e) {
     e.preventDefault();
-
     let tempProj = e.target.value;
-
     setOpen(!open);
-
     dispatch(setProject(tempProj));
+  }
+
+  function handleClick2(e) {
+    e.preventDefault();
+    let tempProj = e.target.value;
+    console.log(tempProj);
   }
 
   return (
@@ -28,12 +33,22 @@ export default function CardCollapse(props) {
         aria-controls="example-collapse-text"
         aria-expanded={open}
         variant="secondary"
-        value="project1"
+        value={selectedProject.data}
       >
-        click
+        Explore!
       </Button>
       <Collapse in={open}>
-        <div id="example-collapse-text">{selectedProject.data}</div>
+        <div id="example-collapse-text">
+          {selectedProject.data}
+          <Button
+            value={selectedProject.title}
+            // onClick={handleClick2}
+            variant="secondary"
+            href={selectedProject.link}
+          >
+            Explore More!
+          </Button>
+        </div>
       </Collapse>
     </>
   );
