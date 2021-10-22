@@ -44,3 +44,8 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
+.fa-linkedin,
+.fa-linkedin-square {
+  color: #007bb6;
+}
