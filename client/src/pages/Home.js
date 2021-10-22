@@ -5,7 +5,7 @@ import { setProject } from "../actions";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
+import Image from "react-bootstrap/Image";
 //CSS
 import styles from "./Home.module.css";
 //Components
@@ -15,6 +15,7 @@ import API from "../utils/API";
 import image1 from "./IMG_5307.JPG";
 import image2 from "./IMG_6077.JPG";
 import image3 from "./IMG_8019.JPG";
+import image4 from "./JD_Image.png";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -60,9 +61,14 @@ export default function Home() {
     <>
       {/* <button onClick={handleClick}>CLICK ME</button> */}
       <Container className={styles["mainContain"]}>
-        <Row>
-          <Col sm={12} className="d-flex justify-content-center">
-            <h1 className="pageHeader">Joey Davidson Portfolio Page</h1>
+        <Row className={styles["bannerRow"]}>
+          <Col
+            sm={12}
+            className="d-flex justify-content-center"
+            className={styles["bannerCol"]}
+          >
+            <Image className={styles["bannerImg"]} src={image4} thumbnail />
+            {/* <h1 className="pageHeader">Joey Davidson Portfolio Page</h1> */}
           </Col>
         </Row>
         <Row>

@@ -21,3 +21,26 @@
 .footer {
   background-color: black;
 }
+
+.navbar {
+  /* margin-bottom: 100px; */
+}
+
+.bannerRow {
+  margin-bottom: 100px;
+}
+
+.img-thumnail {
+  padding: 100px !important;
+  margin-bottom: 100px;
+  margin-top: 5px !important;
+  background-color: black;
+}
+
+.dCard {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
