@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
 import { setProject } from "../../actions";
+import Nav from "react-bootstrap/Nav";
+import styles from "./CardCollapse.module.css";
 
 export default function CardCollapse(props) {
   const [open, setOpen] = useState(false);
@@ -28,15 +30,16 @@ export default function CardCollapse(props) {
 
   return (
     <>
-      <Button
+      <Nav.Link
         onClick={handleClick}
         aria-controls="example-collapse-text"
         aria-expanded={open}
         variant="secondary"
         value={selectedProject.data}
+        className={styles["navLink"]}
       >
         Explore!
-      </Button>
+      </Nav.Link>
       <Collapse in={open}>
         <div id="example-collapse-text">
           {selectedProject.data}

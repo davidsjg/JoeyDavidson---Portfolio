@@ -12,9 +12,9 @@ import styles from "./Home.module.css";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 import API from "../utils/API";
 //Images
-import image1 from "./IMG_5307.JPG";
-import image2 from "./IMG_6077.JPG";
-import image3 from "./IMG_8019.JPG";
+import image1 from "./fish2.PNG";
+import image2 from "./fish3.PNG";
+import image3 from "./fish4.PNG";
 import image4 from "./JD_Image.png";
 
 export default function Home() {

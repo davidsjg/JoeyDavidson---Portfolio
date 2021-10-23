@@ -5,6 +5,7 @@ import CardCollapse from "../CardCollapse/CardCollapse";
 // import { useSelector, useDispatch } from "react-redux";
 //connect is a funciton that we use to bring back a higher order component
 import { connect } from "react-redux";
+import styles from "./ProjectCard.module.css";
 
 function ProjectCard(props) {
   // const dispatch = useDispatch();
@@ -19,7 +20,11 @@ function ProjectCard(props) {
       className={`${props.cname} .mx-auto`}
     >
       {selectedProject.img ? (
-        <Card.Img variant="top" src={selectedProject.img} />
+        <Card.Img
+          variant="top"
+          src={selectedProject.img}
+          className={styles["cardImg"]}
+        />
       ) : (
         <i className="fa fa-spinner fa-spin" aria-hidden="true" />
       )}
