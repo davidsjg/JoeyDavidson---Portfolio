@@ -16,7 +16,7 @@ function ProjectCard(props) {
 
   return (
     <Card
-      style={{ width: "18rem", backgroundColor: "lightgray" }}
+      style={{ width: "85%", backgroundColor: "lightgray" }}
       className={`${props.cname} .mx-auto`}
     >
       {selectedProject.img ? (

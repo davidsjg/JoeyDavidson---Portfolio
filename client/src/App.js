@@ -21,11 +21,11 @@ const App = () => {
   const dispatch = useDispatch();
   const project = useSelector((state) => state.project);
 
-  useEffect(() => {
-    API.getProjects().then((project) => {
-      dispatch(setProject(project.data));
-    });
-  }, []);
+  // useEffect(() => {
+  //   API.getProjects().then((project) => {
+  //     dispatch(setProject(project.data));
+  //   });
+  // }, []);
   return (
     <Router>
       <Contain>
