@@ -2,6 +2,7 @@ import React, { useState } from "react";
 // import { service_8rx5ijd } from "emailjs-com";
 import { send } from "emailjs-com";
 import { init } from "emailjs-com";
+import PageCard2 from "../components/PageCard2/PageCard2";
 init("user_HTcdS3U6s5IFjdiYFuFJt");
 
 export default function Contact() {
@@ -34,37 +35,7 @@ export default function Contact() {
 
   return (
     <>
-      <form onSubmit={onSubmit}>
-        <input
-          type="text"
-          name="from_name"
-          placeholder="from name"
-          value={toSend.from_name}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="to_name"
-          placeholder="to name"
-          value={toSend.to_name}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="message"
-          placeholder="Your message"
-          value={toSend.message}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="reply_to"
-          placeholder="Your email"
-          value={toSend.reply_to}
-          onChange={handleChange}
-        />
-        <button type="submit">Submit</button>
-      </form>
+      <PageCard2 />
     </>
   );
 }

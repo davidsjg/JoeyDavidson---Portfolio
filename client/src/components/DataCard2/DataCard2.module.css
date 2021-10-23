@@ -1,0 +1,9 @@
+.email {
+  color: black;
+  background-color: white;
+  font-weight: 100;
+}
+
+.cardBody {
+  margin: 10px !important;
+}
