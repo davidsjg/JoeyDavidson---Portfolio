@@ -10,17 +10,19 @@ export default function DataCard(props) {
         <h2>WELCOME!</h2>
         <h4>Thank you for visiting my page! </h4>
         <br />
+        {""}
         <h6>
           I started programming in JavaScript at the beginning of 2021. I have
           programmed with Pascal, Visual Basic, C++ and Java in high school and
           college.
-        </h6>
+        </h6>{" "}
         <br />
         <h6>
           I was born and raised in Colorado. I love everything outdoors,
           especially hiking to fish and camp. I'm an avid Colorado Avalanche fan
           and also love to play guitar.
         </h6>
+        {""}
         <i
           class="fab fa-linkedin-in"
           style={{ backgroundColor: "#0077b5", color: "white" }}

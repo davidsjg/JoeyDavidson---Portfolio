@@ -57,7 +57,7 @@ export default function DataCard2(props) {
   return (
     <Card className={props.cname}>
       <Card.Body>
-        <h2>Drop me a line....</h2>{" "}
+        <h2>Drop me a line....</h2>
         <h4>Feel free to send me an email with questions or comments:</h4>
         <br />
         <Form onSubmit={onSubmit}>
@@ -84,7 +84,6 @@ export default function DataCard2(props) {
               ref={userEmail}
             />
           </InputGroup>
-
           <InputGroup className="mb-3">
             <FormControl
               as="textarea"
@@ -97,7 +96,6 @@ export default function DataCard2(props) {
               ref={userMessage}
             />
           </InputGroup>
-
           <Button type="submit" variant="secondary">
             Submit
           </Button>
