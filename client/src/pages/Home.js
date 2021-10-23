@@ -13,8 +13,8 @@ import ProjectCard from "../components/ProjectCard/ProjectCard";
 import API from "../utils/API";
 //Images
 import image1 from "./fish2.PNG";
-import image2 from "./fish3.PNG";
-import image3 from "./fish4.PNG";
+import image2 from "./fish3.jpg";
+import image3 from "./fish7.PNG";
 import image4 from "./JD_Image.png";
 
 export default function Home() {
