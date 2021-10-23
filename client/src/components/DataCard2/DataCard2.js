@@ -1,5 +1,6 @@
-import React, { useState, useRef } from "react";
+import React, { useRef, useState } from "react";
 import Card from "react-bootstrap/Card";
+import Nav from "react-bootstrap/Nav";
 import styles from "./DataCard2.module.css";
 import InputGroup from "react-bootstrap/InputGroup";
 import { FormControl } from "react-bootstrap";
@@ -53,53 +54,54 @@ export default function DataCard2(props) {
   const handleChange = (e) => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
-
   return (
-    <Card className={styles["cardBody"]} className={props.cname}>
+    <Card className={props.cname}>
       <Card.Body>
-        <h2>Drop me a line....</h2>
+        <h2>Drop me a line....</h2>{" "}
         <h4>Feel free to send me an email with questions or comments:</h4>
-        <>
-          <Form onSubmit={onSubmit}>
-            <InputGroup className="mb-3">
-              <FormControl
-                placeholder="YourName"
-                aria-label="YourName"
-                aria-describedby="basic-addon1"
-                name="from_name"
-                value={toSend.from_name}
-                onChange={handleChange}
-                ref={userName}
-              />
-            </InputGroup>
-            <InputGroup className="mb-3">
-              <FormControl
-                placeholder="Your Email Address"
-                aria-label="YourEmail"
-                aria-describedby="basic-addon1"
-                name="reply_to"
-                value={toSend.reply_to}
-                onChange={handleChange}
-                ref={userEmail}
-              />
-            </InputGroup>
-            <InputGroup className="mb-3">
-              <FormControl
-                placeholder="Your Message"
-                aria-label="YourMessage"
-                aria-describedby="basic-addon1"
-                name="useMess"
-                value={toSend.useMess}
-                onChange={handleChange}
-                ref={userMessage}
-              />
-            </InputGroup>
+        <br />
+        <Form onSubmit={onSubmit}>
+          <InputGroup className="mb-3">
+            <FormControl
+              placeholder="YourName"
+              aria-label="YourName"
+              aria-describedby="basic-addon1"
+              name="from_name"
+              value={toSend.from_name}
+              onChange={handleChange}
+              ref={userName}
+            />
+          </InputGroup>
+          <br />
+          <InputGroup className="mb-3">
+            <FormControl
+              placeholder="Your Email Address"
+              aria-label="YourEmail"
+              aria-describedby="basic-addon1"
+              name="reply_to"
+              value={toSend.reply_to}
+              onChange={handleChange}
+              ref={userEmail}
+            />
+          </InputGroup>
 
-            <Button type="submit" variant="secondary">
-              Submit
-            </Button>
-          </Form>
-        </>
+          <InputGroup className="mb-3">
+            <FormControl
+              as="textarea"
+              placeholder="Your Message"
+              aria-label="YourMessage"
+              aria-describedby="basic-addon1"
+              name="useMess"
+              value={toSend.useMess}
+              onChange={handleChange}
+              ref={userMessage}
+            />
+          </InputGroup>
+
+          <Button type="submit" variant="secondary">
+            Submit
+          </Button>
+        </Form>
       </Card.Body>
     </Card>
   );

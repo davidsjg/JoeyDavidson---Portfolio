@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setProject } from "../actions";
 import PageCard from "../components/PageCard/PageCard";
 
-export default function AboutMe() {
+export default function Contact() {
   const project = useSelector((state) => state.project);
   const userInput = useRef();
   const dispatch = useDispatch();

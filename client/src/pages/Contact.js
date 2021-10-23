@@ -1,41 +1,27 @@
-import React, { useState } from "react";
-// import { service_8rx5ijd } from "emailjs-com";
-import { send } from "emailjs-com";
-import { init } from "emailjs-com";
+import React, { useRef } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { setProject } from "../actions";
 import PageCard2 from "../components/PageCard2/PageCard2";
-init("user_HTcdS3U6s5IFjdiYFuFJt");
 
-export default function Contact() {
-  const [toSend, setToSend] = useState({
-    from_name: "",
-    to_name: "",
-    message: "",
-    reply_to: "",
-  });
+export default function AboutMe() {
+  const project = useSelector((state) => state.project);
+  const userInput = useRef();
+  const dispatch = useDispatch();
+  let localCount = 0;
 
-  const onSubmit = (e) => {
+  function handleClick(e) {
     e.preventDefault();
-    send(
-      "service_m4i6k16",
-      "template_0otklia",
-      toSend,
-      "user_HTcdS3U6s5IFjdiYFuFJt"
-    )
-      .then((response) => {
-        console.log("SUCCESS!", response.status, response.text);
-      })
-      .catch((err) => {
-        console.log("FAILED...", err);
-      });
-  };
+    const newProj = userInput.current.value;
 
-  const handleChange = (e) => {
-    setToSend({ ...toSend, [e.target.name]: e.target.value });
-  };
+    localCount = localCount + 1;
+
+    dispatch(setProject(newProj));
+  }
 
   return (
     <>
       <PageCard2 />
+      {/* <button onClick={handleClick}>Update Project!</button> */}
     </>
   );
 }
