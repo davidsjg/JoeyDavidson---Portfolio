@@ -17,10 +17,25 @@ export default function PageCard() {
         <Container className={styles["mainContain"]}>
           <Row className={styles["subRow"]}>
             <Col sm={4} className={styles["picCol"]}>
-              <Image src={image1} className={styles["mainImg"]} />
+              <Image
+                src={image1}
+                // className="img-fluid"
+                className={styles["mainImg"]}
+              />
             </Col>
             <Col sm={8} className={styles["dataCol"]}>
-              <DataCard cname="dCard" />
+              <Row>
+                <Col sm={1}></Col>
+                <Col sm={10}> </Col>
+                <Col sm={1}></Col>
+              </Row>
+              <Row>
+                <Col sm={1}></Col>
+                <Col sm={10}>
+                  <DataCard cname="dCard" />
+                </Col>
+                <Col sm={1}></Col>
+              </Row>
             </Col>
           </Row>
         </Container>
