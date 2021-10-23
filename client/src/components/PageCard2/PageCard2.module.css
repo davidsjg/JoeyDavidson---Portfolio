@@ -4,6 +4,7 @@
 
   margin-left: 0px !important;
   padding-left: 0px !important;
+  margin-bottom: -30px !important;
 }
 
 .dataCol {
@@ -13,15 +14,15 @@
 .mainImg {
   /* margin-bottom: -10px; */
   width: 100%;
+  height: 90%;
+  margin: 10px;
 
   border-radius: 5px;
-  margin: 20px !important;
 
   /* border-top-left-radius: 5px;  */
 }
 
 .mainCard {
-  background-color: red;
 }
 
 .mainContain {

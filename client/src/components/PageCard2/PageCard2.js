@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Image from "react-bootstrap/Image";
 
-import image1 from "./fish5.jpg";
+import image1 from "./lake1.JPG";
 import styles from "./PageCard2.module.css";
 import DataCard2 from "../DataCard2/DataCard2";
 
@@ -32,7 +32,7 @@ export default function PageCard2() {
               <Row>
                 <Col sm={1}></Col>
                 <Col sm={10}>
-                  <DataCard2 />
+                  <DataCard2 cname="dCard" />
                 </Col>
                 <Col sm={1}></Col>
               </Row>

@@ -55,7 +55,7 @@ export default function DataCard2(props) {
   };
 
   return (
-    <Card className={styles["cardBody"]}>
+    <Card className={styles["cardBody"]} className={props.cname}>
       <Card.Body>
         <h2>Drop me a line....</h2>
         <h4>Feel free to send me an email with questions or comments:</h4>
