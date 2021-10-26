@@ -9,6 +9,7 @@ import Image from "react-bootstrap/Image";
 import image1 from "./IMG_6490.JPG";
 import styles from "./OneCard.module.css";
 import DataCard from "../DataCard/DataCard";
+import CardCollapse2 from "../CardCollapse2/CardCollapse2";
 
 export default function OneCard(props) {
   let aboutMe;
@@ -36,7 +37,7 @@ export default function OneCard(props) {
       break;
     case "projects":
       colSize = 12;
-      colSize2 = 6;
+      colSize2 = 12;
       projects = true;
       break;
 
@@ -62,16 +63,11 @@ export default function OneCard(props) {
             className={styles["mainImg"]}
           />
         </Col>
-        {aboutMe === true ? (
-          <Col sm={colSize2} style={{ backgroundColor: "royalblue" }}>
-            Data
-          </Col>
-        ) : (
-          <span />
-        )}
+
+        {aboutMe === true ? <Col sm={colSize2}>Data</Col> : <span />}
         {projects === true ? (
-          <Col sm={colSize2} style={{ backgroundColor: "royalblue" }}>
-            DATA
+          <Col sm={colSize2}>
+            <CardCollapse2 />
           </Col>
         ) : (
           <span />
