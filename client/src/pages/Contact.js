@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setProject } from "../actions";
 import PageCard2 from "../components/PageCard2/PageCard2";
+import OneCard from "../components/OneCard/OneCard";
 
 export default function AboutMe() {
   const project = useSelector((state) => state.project);
@@ -20,7 +21,7 @@ export default function AboutMe() {
 
   return (
     <>
-      <PageCard2 />
+      <OneCard page={"contact"} />
       {/* <button onClick={handleClick}>Update Project!</button> */}
     </>
   );

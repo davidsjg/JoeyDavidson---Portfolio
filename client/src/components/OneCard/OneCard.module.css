@@ -16,6 +16,27 @@
   margin: 0px !important;
   border-radius: 2px;
 }
+.home {
+  width: 100%;
+  margin: 0px !important;
+  border-radius: 2px;
+}
+.projects {
+  width: 100%;
+  margin: 0px !important;
+  border-radius: 2px;
+}
+
+.aboutMe {
+  width: 100%;
+  margin: 0px !important;
+  border-radius: 2px;
+}
+.contact {
+  width: 100%;
+  margin: 0px !important;
+  border-radius: 2px;
+}
 
 .mainCard {
 }

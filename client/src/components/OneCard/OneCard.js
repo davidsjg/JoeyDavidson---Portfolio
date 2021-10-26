@@ -20,6 +20,8 @@ export default function OneCard(props) {
   let home;
   let width;
 
+  let page = props.page;
+
   switch (props.page) {
     case "aboutMe":
       colSize = 4;
@@ -34,8 +36,9 @@ export default function OneCard(props) {
       break;
     case "home":
       colSize = 12;
-      colSize2 = 6;
+      colSize2 = 12;
       home = true;
+      width = "18rem";
       break;
     case "projects":
       colSize = 12;
@@ -63,12 +66,19 @@ export default function OneCard(props) {
           <Image
             src={image1}
             // className="img-fluid"
-            className={styles["mainImg"]}
+            className={styles[`${page}`]}
           />
         </Col>
 
         {aboutMe === true ? <Col sm={colSize2}>Data</Col> : <span />}
         {projects === true ? (
+          <Col sm={colSize2}>
+            <CardCollapse2 />
+          </Col>
+        ) : (
+          <span />
+        )}
+        {home === true ? (
           <Col sm={colSize2}>
             <CardCollapse2 />
           </Col>
