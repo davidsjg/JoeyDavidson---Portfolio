@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 //Bootstrap
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -10,8 +10,13 @@ import image1 from "./IMG_6490.JPG";
 import styles from "./OneCard.module.css";
 import DataCard from "../DataCard/DataCard";
 import CardCollapse2 from "../CardCollapse2/CardCollapse2";
+import HomeContext from "../../utils/HomeContext";
 
 export default function OneCard(props) {
+  const { dataArr } = useContext(HomeContext);
+
+  console.log(dataArr);
+
   let aboutMe;
   let colSize = 0;
   let colSize2 = 0;
@@ -19,6 +24,8 @@ export default function OneCard(props) {
   let contact;
   let home;
   let width;
+
+  console.log(props);
 
   let page = props.page;
 
@@ -52,8 +59,7 @@ export default function OneCard(props) {
       colSize2 = 12 - colSize;
       break;
   }
-  console.log("aboutMe = " + aboutMe);
-  console.log(props);
+
   return (
     <Container style={{ width }}>
       {/* <Card> */}
@@ -61,7 +67,7 @@ export default function OneCard(props) {
         <Col
           sm={colSize}
           className={styles["cardImg"]}
-          style={{ backgroundColor: "red" }}
+          // style={{ backgroundColor: "red" }}
         >
           <Image
             src={image1}

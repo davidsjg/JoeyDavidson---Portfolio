@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { setProject } from "../actions";
 import PageCard2 from "../components/PageCard2/PageCard2";
 import OneCard from "../components/OneCard/OneCard";
+import { Container } from "react-bootstrap";
+import styles from "./Contact.module.css";
 
 export default function AboutMe() {
   const project = useSelector((state) => state.project);
@@ -21,7 +23,9 @@ export default function AboutMe() {
 
   return (
     <>
-      <OneCard page={"contact"} />
+      <Container className={styles["mainContain"]}>
+        <OneCard page="contact" />
+      </Container>
       {/* <button onClick={handleClick}>Update Project!</button> */}
     </>
   );

@@ -1,0 +1,7 @@
+.mainContain {
+  background-image: url("https://i.imgur.com/CQigMq4.jpg?1");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 5px;
+}
