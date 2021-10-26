@@ -13,9 +13,10 @@ import CardCollapse2 from "../CardCollapse2/CardCollapse2";
 import HomeContext from "../../utils/HomeContext";
 
 export default function OneCard(props) {
-  const { dataArr } = useContext(HomeContext);
+  const { dataArr, currProject } = useContext(HomeContext);
+  const setHomeProject = props.setHomeProject;
 
-  console.log(dataArr);
+  console.log(props);
 
   let aboutMe;
   let colSize = 0;
@@ -25,9 +26,11 @@ export default function OneCard(props) {
   let home;
   let width;
 
-  console.log(props);
-
   let page = props.page;
+
+  let currProj = props.curProj;
+
+  console.log(currProj);
 
   switch (props.page) {
     case "aboutMe":
@@ -70,13 +73,14 @@ export default function OneCard(props) {
           // style={{ backgroundColor: "red" }}
         >
           <Image
-            src={image1}
+            src={currProj.img}
             // className="img-fluid"
             className={styles[`${page}`]}
           />
         </Col>
 
         {aboutMe === true ? <Col sm={colSize2}>Data</Col> : <span />}
+        {contact === true ? <Col sm={colSize2}>Data</Col> : <span />}
         {projects === true ? (
           <Col sm={colSize2}>
             <CardCollapse2 />

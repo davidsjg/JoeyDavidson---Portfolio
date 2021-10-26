@@ -42,7 +42,14 @@ export default function Home() {
   ];
   const [homeState, setHomeState] = useState({
     dataArr: tempArr,
+    currProject: {},
   });
+
+  function setHomeProject(currProject) {
+    let dataArr = tempArr;
+
+    // setHomeState(dataArr, currProject);
+  }
 
   function handleClick(e) {
     e.preventDefault();
@@ -63,9 +70,14 @@ export default function Home() {
         </Row>
         <Row>
           {homeState.dataArr.map((project, index) => {
+            let tempProj = tempArr[index];
             return (
               <Col key={project.id} className={styles["colProj"]} sm={4}>
-                <OneCard page={"home"} />
+                <OneCard
+                  page={"home"}
+                  setHomeProject={setHomeProject}
+                  curProj={tempProj}
+                />
               </Col>
             );
           })}
