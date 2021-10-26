@@ -25,7 +25,7 @@ export default function Contact() {
 
   return (
     <>
-      <OneCard aboutMe={aboutMe} page={projects} />
+      <OneCard aboutMe={aboutMe} page={aboutMe} />
       {/* <button onClick={handleClick}>Update Project!</button> */}
     </>
   );

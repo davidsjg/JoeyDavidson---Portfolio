@@ -18,12 +18,14 @@ export default function OneCard(props) {
   let projects;
   let contact;
   let home;
+  let width;
 
   switch (props.page) {
     case "aboutMe":
       colSize = 4;
       colSize2 = 8;
       aboutMe = true;
+      width = "100%";
       break;
     case "contact":
       colSize = 4;
@@ -39,6 +41,7 @@ export default function OneCard(props) {
       colSize = 12;
       colSize2 = 12;
       projects = true;
+      width = "18rem";
       break;
 
     default:
@@ -49,7 +52,7 @@ export default function OneCard(props) {
   console.log("aboutMe = " + aboutMe);
   console.log(props);
   return (
-    <Container style={{ width: "18rem" }}>
+    <Container style={{ width }}>
       {/* <Card> */}
       <Row>
         <Col

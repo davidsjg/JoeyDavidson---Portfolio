@@ -11,6 +11,7 @@ import styles from "./Home.module.css";
 //Components
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 import API from "../utils/API";
+import OneCard from "../components/OneCard/OneCard";
 //Images
 import image1 from "./fish2.PNG";
 import image2 from "./fish3.jpg";
@@ -75,11 +76,12 @@ export default function Home() {
           {tempArr.map((project, index) => {
             return (
               <Col key={project.id} className={styles["colProj"]} sm={4}>
-                <ProjectCard
+                <OneCard page={"projects"} />
+                {/* <ProjectCard
                   key={index}
                   cname="projectCard"
                   project={project}
-                />
+                /> */}
               </Col>
             );
           })}
