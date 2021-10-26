@@ -3,3 +3,8 @@
   background-color: white;
   font-weight: 100;
 }
+
+.span {
+  color: gray;
+  font-style: italic;
+}

@@ -58,7 +58,8 @@ export default function DataCard2(props) {
     <Card className={props.cname}>
       <Card.Body>
         <h2>Drop me a line....</h2>
-        <h4>Feel free to send me an email with questions or comments:</h4>
+        <br />
+        <h4>Feel free to send me an email with questions or comments.</h4>
         <br />
         <Form onSubmit={onSubmit}>
           <InputGroup className="mb-3">
@@ -72,7 +73,7 @@ export default function DataCard2(props) {
               ref={userName}
             />
           </InputGroup>
-          <br />
+
           <InputGroup className="mb-3">
             <FormControl
               placeholder="Your Email Address"
@@ -99,6 +100,10 @@ export default function DataCard2(props) {
           <Button type="submit" variant="secondary">
             Submit
           </Button>
+          <span className={styles["span"]}>
+            {""}
+            (An email will be sent directly to me)
+          </span>
         </Form>
       </Card.Body>
     </Card>
