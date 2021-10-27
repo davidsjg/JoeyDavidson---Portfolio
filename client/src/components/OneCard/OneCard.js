@@ -13,8 +13,7 @@ import Link from "react-bootstrap/NavLink";
 
 import image1 from "./IMG_6490.JPG";
 import styles from "./OneCard.module.css";
-import DataCard from "../DataCard/DataCard";
-import CardCollapse2 from "../CardCollapse2/CardCollapse2";
+
 import HomeContext from "../../utils/HomeContext";
 
 export default function OneCard(props) {
@@ -91,8 +90,28 @@ export default function OneCard(props) {
             />
           </Col>
 
-          {aboutMe === true ? <Col sm={colSize2}>Data</Col> : <span />}
+          {aboutMe === true ? <Col sm={colSize2}></Col> : <span />}
           {home === true ? (
+            <Col sm={colSize2}>
+              <Link
+                // onClick={handleClick}
+                // aria-controls="example-collapse-text"
+                // aria-expanded={open}
+                // variant="secondary"
+                style={{ color: "black" }}
+                className={styles["navBack"]}
+                className="navLink2"
+                value={props.project.title}
+                // className={styles["navLink"]}
+                href={props.project.link}
+              >
+                {props.project.title}
+              </Link>
+            </Col>
+          ) : (
+            <span />
+          )}
+          {projects === true ? (
             <Col sm={colSize2}>
               <Link
                 // onClick={handleClick}

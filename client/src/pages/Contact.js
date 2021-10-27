@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setProject } from "../actions";
-import PageCard2 from "../components/PageCard2/PageCard2";
+
 import OneCard from "../components/OneCard/OneCard";
 import { Container } from "react-bootstrap";
 import styles from "./Contact.module.css";

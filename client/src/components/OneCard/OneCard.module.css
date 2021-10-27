@@ -17,23 +17,27 @@
   border-radius: 2px;
 }
 .home {
-  width: 100%;
+  width: fit-content;
+  height: 300px;
 
   margin: 0px !important;
   border-radius: 2px;
 }
 .projects {
-  width: 100%;
+  width: fit-content;
+  height: 300px;
+
   margin: 0px !important;
   border-radius: 2px;
 }
 
 .aboutMe {
-  width: 100%;
+  width: fit-content;
+  height: 300px;
 
+  /* margin: 0px !important; */
+  margin-bottom: 50px;
   border-radius: 2px;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 .contact {
   width: 100%;
@@ -56,4 +60,5 @@
 
 .cardImg {
   padding: 0px !important;
+  text-align: center;
 }

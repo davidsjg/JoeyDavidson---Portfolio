@@ -2,10 +2,12 @@ import React, { useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setProject } from "../actions";
 import OneCard from "../components/OneCard/OneCard";
-import PageCard from "../components/PageCard/PageCard";
+
 import { Container } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import styles from "./AboutMe.module.css";
-import image1 from "./IMG_8019.JPG";
+import image1 from "./fish1.PNG";
+import LogoBanner from "../components/LogoBanner/LogoBanner";
 
 export default function AboutMe() {
   const aboutMe = "aboutMe";
@@ -20,6 +22,9 @@ export default function AboutMe() {
   return (
     <>
       <Container className={styles["mainContain"]}>
+        <Row className={styles["bannerRow"]}>
+          <LogoBanner />
+        </Row>
         <OneCard page="aboutMe" project={project} />
       </Container>
     </>

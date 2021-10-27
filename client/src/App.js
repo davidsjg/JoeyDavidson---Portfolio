@@ -16,6 +16,7 @@ import Contain from "./components/Contain/Contain";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
 import Footer from "./components/Footer/Footer";
 import API from "./utils/API";
+import { Container } from "react-bootstrap";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -29,7 +30,7 @@ const App = () => {
 
   return (
     <Router>
-      <Contain>
+      <Container>
         <NavigationBar />
         <Switch>
           {/* <Route exact path={"/"} render={(props) => <Home {...props} />} /> */}
@@ -48,7 +49,7 @@ const App = () => {
         </Switch>
 
         <Footer />
-      </Contain>
+      </Container>
     </Router>
   );
 };

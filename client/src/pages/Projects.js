@@ -71,7 +71,7 @@ export default function Projects() {
             let tempProj = tempArr[index];
             return (
               <Col key={project.id} className={styles["colProj"]} sm={4}>
-                <OneCard page="home" project={project} />
+                <OneCard page="projects" project={project} />
               </Col>
             );
           })}
