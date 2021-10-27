@@ -12,7 +12,7 @@ import AboutMe from "../src/pages/AboutMe";
 import Contact from "../src/pages/Contact";
 
 //imported components
-import Contain from "./components/Contain/Contain";
+
 import NavigationBar from "./components/NavigationBar/NavigationBar";
 import Footer from "./components/Footer/Footer";
 import API from "./utils/API";
