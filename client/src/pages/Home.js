@@ -13,7 +13,7 @@ import OneCard from "../components/OneCard/OneCard";
 import LogoBanner from "../components/LogoBanner/LogoBanner";
 //Images
 import image1 from "./fish2.PNG";
-import image2 from "./fish3.jpg";
+import image2 from "./fish1.PNG";
 import image3 from "./fish7.PNG";
 // import image4 from "./JD_Image.png";
 
@@ -63,7 +63,7 @@ export default function Home() {
 
   return (
     <HomeContext.Provider value={homeState}>
-      <button onClick={handleClick}>Click Me</button>
+      {/* <button onClick={handleClick}>Click Me</button> */}
       <Container className={styles["mainContain"]}>
         <Row className={styles["bannerRow"]}>
           <LogoBanner />

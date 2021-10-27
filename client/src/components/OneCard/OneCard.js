@@ -83,18 +83,35 @@ export default function OneCard(props) {
         {contact === true ? <Col sm={colSize2}>Data</Col> : <span />}
         {projects === true ? (
           <Col sm={colSize2}>
-            <CardCollapse2 />
+            <CardCollapse2
+              // className={styles[`${page}`]}
+              curProj={currProj}
+            />
           </Col>
         ) : (
           <span />
         )}
-        {home === true ? (
+        <Nav.Link
+          onClick={handleClick}
+          aria-controls="example-collapse-text"
+          aria-expanded={open}
+          variant="secondary"
+          className={styles[`${page}`]}
+          style={{ color: "black" }}
+          className={styles["navBack"]}
+
+          // value={selectedProject.data}
+          // className={styles["navLink"]}
+        >
+          Explore!
+        </Nav.Link>
+        {/* {home === true ? (
           <Col sm={colSize2}>
-            <CardCollapse2 />
+            <CardCollapse2 currProj={currProj} page="home" />
           </Col>
         ) : (
           <span />
-        )}
+        )} */}
       </Row>
       {/* </Card> */}
     </Container>
