@@ -10,8 +10,6 @@ import image1 from "./fish1.PNG";
 import LogoBanner from "../components/LogoBanner/LogoBanner";
 
 export default function AboutMe() {
-  const aboutMe = "aboutMe";
-
   let project = {
     title: "Contact Me",
     data: "Click to contact me!",

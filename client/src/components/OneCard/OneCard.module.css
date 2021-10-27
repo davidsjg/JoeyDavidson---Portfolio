@@ -40,11 +40,12 @@
   border-radius: 2px;
 }
 .contact {
-  width: 100%;
+  width: fit-content;
+  height: 300px;
 
+  /* margin: 0px !important; */
+  margin-bottom: 50px;
   border-radius: 2px;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .mainCard {
@@ -68,6 +69,15 @@
 }
 
 .aboutMeDiv {
+  /* background-color: #d3d3d3; */
+  color: white;
+  border-radius: 2px solid black !important;
+}
+.contactCol {
+  background-color: red;
+}
+
+.contactDiv {
   /* background-color: #d3d3d3; */
   color: white;
   border-radius: 2px solid black !important;

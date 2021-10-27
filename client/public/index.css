@@ -68,8 +68,3 @@
 .navLink2:hover {
   color: white !important;
 }
-
-.aboutMeCol {
-  height: min-content;
-  border-radius: 20px solid black !important;
-}

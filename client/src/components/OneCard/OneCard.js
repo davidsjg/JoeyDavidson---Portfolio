@@ -39,10 +39,6 @@ export default function OneCard(props) {
 
   let page = props.page;
 
-  function getKeyByValue(object, value) {
-    return Object.keys(object).find((key) => object[key] === value);
-  }
-
   switch (props.page) {
     case "aboutMe":
       colSize = 4;
@@ -54,6 +50,7 @@ export default function OneCard(props) {
       colSize = 4;
       colSize2 = 8;
       contact = true;
+      width = "100%";
       break;
     case "home":
       colSize = 12;
@@ -90,7 +87,7 @@ export default function OneCard(props) {
               className={styles[`${page}`]}
             />
           </Col>
-
+          {/* IF ABOUT ME IS SENT */}
           {aboutMe === true ? (
             <Col sm={colSize2} className="aboutMeCol">
               <div className={styles["aboutMeDiv"]}>
@@ -113,19 +110,37 @@ export default function OneCard(props) {
           ) : (
             <span />
           )}
+          {contact === true ? (
+            <Col sm={colSize2} className="contactCol">
+              <div className={styles["contactDiv"]}>
+                <h2>WELCOME!</h2>
+                <h4>Thank you for visiting my page! </h4>
+                <br />
+                <h6>
+                  I started programming in JavaScript at the beginning of 2021.
+                  I have programmed with Pascal, Visual Basic, C++ and Java in
+                  high school and college.
+                </h6>
+                <br />
+                <h6>
+                  I was born and raised in Colorado. I love everything outdoors,
+                  especially hiking to fish and camp. I'm an avid Colorado
+                  Avalanche fan and also love to play guitar.
+                </h6>
+              </div>
+            </Col>
+          ) : (
+            <span />
+          )}
+
           {/* if HOME IS SENT */}
           {home === true ? (
             <Col sm={colSize2}>
               <Link
-                // onClick={handleClick}
-                // aria-controls="example-collapse-text"
-                // aria-expanded={open}
-                // variant="secondary"
                 style={{ color: "black" }}
                 className={styles["navBack"]}
                 className="navLink2"
                 value={props.project.title}
-                // className={styles["navLink"]}
                 href={props.project.link}
               >
                 {props.project.title}
@@ -134,18 +149,14 @@ export default function OneCard(props) {
           ) : (
             <span />
           )}
+          {/* IF PROJECTS IS SENT */}
           {projects === true ? (
             <Col sm={colSize2}>
               <Link
-                // onClick={handleClick}
-                // aria-controls="example-collapse-text"
-                // aria-expanded={open}
-                // variant="secondary"
                 style={{ color: "black" }}
                 className={styles["navBack"]}
                 className="navLink2"
                 value={props.project.title}
-                // className={styles["navLink"]}
                 href={props.project.link}
               >
                 {props.project.title}
@@ -154,15 +165,7 @@ export default function OneCard(props) {
           ) : (
             <span />
           )}
-          {/* {home === true ? (
-          <Col sm={colSize2}>
-            <CardCollapse2 />
-          </Col>
-        ) : (
-          <span />
-        )} */}
         </Row>
-        {/* </Card> */}
       </Container>
     </>
   );
