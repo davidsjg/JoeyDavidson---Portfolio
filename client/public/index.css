@@ -52,3 +52,19 @@
 .fa-linkedin-square {
   color: #007bb6;
 }
+
+.navLink2 {
+  background-color: #d3d3d3;
+  color: black !important;
+  border-radius: 2px;
+  width: 40%;
+  width: 80%;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  border: 1px solid black;
+}
+.navLink2:hover {
+  color: white !important;
+}

@@ -26,6 +26,7 @@ const App = () => {
       dispatch(setProject(project.data));
     });
   }, []);
+
   return (
     <Router>
       <Contain>

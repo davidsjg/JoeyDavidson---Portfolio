@@ -10,7 +10,7 @@ export default function Contact() {
   const project = useSelector((state) => state.project);
   const userInput = useRef();
   const dispatch = useDispatch();
-  let localCount = 0;
+
   const aboutMe = "aboutMe";
   const projects = "projects";
   const home = "home";
@@ -19,8 +19,6 @@ export default function Contact() {
   function handleClick(e) {
     e.preventDefault();
     const newProj = userInput.current.value;
-
-    localCount = localCount + 1;
 
     dispatch(setProject(newProj));
   }

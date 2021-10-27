@@ -16,7 +16,7 @@ export default function Projects(props) {
   const project = useSelector((state) => state.project);
   const userInput = useRef();
   const dispatch = useDispatch();
-  let localCount = 0;
+
   const aboutMe = "aboutMe";
   const projects = props.page;
   const home = "home";
@@ -25,8 +25,6 @@ export default function Projects(props) {
   function handleClick(e) {
     e.preventDefault();
     const newProj = userInput.current.value;
-
-    localCount = localCount + 1;
 
     dispatch(setProject(newProj));
   }

@@ -10,13 +10,10 @@ export default function AboutMe() {
   const project = useSelector((state) => state.project);
   const userInput = useRef();
   const dispatch = useDispatch();
-  let localCount = 0;
 
   function handleClick(e) {
     e.preventDefault();
     const newProj = userInput.current.value;
-
-    localCount = localCount + 1;
 
     dispatch(setProject(newProj));
   }

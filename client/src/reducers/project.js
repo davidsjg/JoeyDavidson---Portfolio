@@ -1,4 +1,4 @@
-const initialState = { project: ["PROJECT 1 BROH"], count: 0 };
+const initialState = { project: [{ title: "ah yeah brah" }], currProject: {} };
 
 const projectReducer = (state = initialState, { type, payload }) => {
   switch (type) {
@@ -6,6 +6,11 @@ const projectReducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         project: payload,
+      };
+    case "SET_CURR_PROJECT":
+      return {
+        ...state,
+        currProject: payload,
       };
 
     default:
