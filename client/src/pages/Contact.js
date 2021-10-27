@@ -5,23 +5,20 @@ import PageCard2 from "../components/PageCard2/PageCard2";
 import OneCard from "../components/OneCard/OneCard";
 import { Container } from "react-bootstrap";
 import styles from "./Contact.module.css";
+import image1 from "./IMG_5307.JPG";
 
 export default function AboutMe() {
-  const project = useSelector((state) => state.project);
-  const userInput = useRef();
-  const dispatch = useDispatch();
-
-  function handleClick(e) {
-    e.preventDefault();
-    const newProj = userInput.current.value;
-
-    dispatch(setProject(newProj));
-  }
+  let project = {
+    title: "Contact Me",
+    data: "Click to contact me!",
+    img: image1,
+    link: "/contact",
+  };
 
   return (
     <>
       <Container className={styles["mainContain"]}>
-        <OneCard page="contact" />
+        <OneCard page="contact" project={project} />
       </Container>
       {/* <button onClick={handleClick}>Update Project!</button> */}
     </>

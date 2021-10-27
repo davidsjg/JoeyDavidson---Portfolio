@@ -1,34 +1,25 @@
-import React, { useRef } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { setProject } from "../actions";
-import OneCard from "../components/OneCard/OneCard";
-import PageCard from "../components/PageCard/PageCard";
-import image1 from "./fish2.PNG";
-import image2 from "./fish3.jpg";
-import image3 from "./fish7.PNG";
+import React, { useState } from "react";
+
+//Bootstrap
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { Container } from "react-bootstrap";
-import { Row } from "react-bootstrap";
+import Image from "react-bootstrap/Image";
+//CSS
 import styles from "./Projects.module.css";
+//Components
+
+import OneCard from "../components/OneCard/OneCard";
 import LogoBanner from "../components/LogoBanner/LogoBanner";
+//Images
+import image1 from "./fish2.PNG";
+import image2 from "./fish1.PNG";
+import image3 from "./fish7.PNG";
+// import image4 from "./JD_Image.png";
 
-export default function Projects(props) {
-  const project = useSelector((state) => state.project);
-  const userInput = useRef();
-  const dispatch = useDispatch();
+import HomeContext from "../utils/HomeContext";
 
-  const aboutMe = "aboutMe";
-  const projects = props.page;
-  const home = "home";
-  const contact = "contact";
-
-  function handleClick(e) {
-    e.preventDefault();
-    const newProj = userInput.current.value;
-
-    dispatch(setProject(newProj));
-  }
-
+export default function Projects() {
   let tempArr = [
     {
       title: "Contact Me",
@@ -49,28 +40,43 @@ export default function Projects(props) {
       link: "/projects",
     },
   ];
+  const [homeState, setHomeState] = useState({
+    dataArr: tempArr,
+    currProject: {},
+  });
+
+  function setHomeProject(currProject) {
+    let dataArr = tempArr;
+
+    // setHomeState(dataArr, currProject);
+  }
+
+  function handleClick(e) {
+    e.preventDefault();
+    console.log(homeState);
+  }
+  function handleClick2(e) {
+    e.preventDefault();
+  }
 
   return (
-    <>
+    <HomeContext.Provider value={homeState}>
+      {/* <button onClick={handleClick}>Click Me</button> */}
       <Container className={styles["mainContain"]}>
         <Row className={styles["bannerRow"]}>
           <LogoBanner />
         </Row>
-        <Row className={styles["bannerRow"]}>
-          {tempArr.map((project, index) => {
+        <Row>
+          {homeState.dataArr.map((project, index) => {
+            let tempProj = tempArr[index];
             return (
               <Col key={project.id} className={styles["colProj"]} sm={4}>
-                <OneCard page={"projects"} />
-                {/* <ProjectCard
-                  key={index}
-                  cname="projectCard"
-                  project={project}
-                /> */}
+                <OneCard page="home" project={project} />
               </Col>
             );
           })}
         </Row>
       </Container>
-    </>
+    </HomeContext.Provider>
   );
 }

@@ -104,7 +104,7 @@ export default function OneCard(props) {
                 className="navLink2"
                 value={props.project.title}
                 // className={styles["navLink"]}
-                href={`/'${props.page}`}
+                href={props.project.link}
               >
                 {props.project.title}
               </Link>

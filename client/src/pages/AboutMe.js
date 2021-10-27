@@ -5,32 +5,22 @@ import OneCard from "../components/OneCard/OneCard";
 import PageCard from "../components/PageCard/PageCard";
 import { Container } from "react-bootstrap";
 import styles from "./AboutMe.module.css";
-import image1 from "./fish2.PNG";
+import image1 from "./IMG_8019.JPG";
 
 export default function AboutMe() {
-  const userInput = useRef();
-  const dispatch = useDispatch();
-
   const aboutMe = "aboutMe";
 
-  let curProj = {
+  let project = {
     title: "Contact Me",
     data: "Click to contact me!",
     img: image1,
     link: "/contact",
   };
 
-  function handleClick(e) {
-    e.preventDefault();
-    const newProj = userInput.current.value;
-
-    dispatch(setProject(newProj));
-  }
-
   return (
     <>
       <Container className={styles["mainContain"]}>
-        <OneCard page={aboutMe} curProj={curProj} />
+        <OneCard page="aboutMe" project={project} />
       </Container>
     </>
   );
