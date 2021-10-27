@@ -12,4 +12,10 @@
 .outerNav {
   margin: 5px;
   text-align: center;
+  background-image: url("../../pages/fish1.PNG");
+  background-size: cover;
+}
+
+.imgDrop {
+  height: 10%;
 }
