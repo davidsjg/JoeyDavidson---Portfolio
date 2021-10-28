@@ -23,7 +23,7 @@ export default function Contact() {
         <Row className={styles["bannerRow"]}>
           <LogoBanner />
         </Row>
-        <OneCard page="aboutMe" project={project} />
+        <OneCard page="contact" project={project} />
       </Container>
     </>
   );
