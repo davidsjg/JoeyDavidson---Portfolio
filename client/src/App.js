@@ -10,6 +10,7 @@ import Home from "../src/pages/Home/Home";
 import Projects from "../src/pages/Projects/Projects";
 import AboutMe from "../src/pages/AboutMe/AboutMe";
 import Contact from "../src/pages/Contact/Contact";
+import Test from "./pages/Test/Test";
 
 //imported components
 
@@ -34,18 +35,14 @@ const App = () => {
         <NavigationBar />
         <Switch>
           {/* <Route exact path={"/"} render={(props) => <Home {...props} />} /> */}
-          <Route exact path={"/"}>
-            <Home />
-          </Route>
-          <Route path={"/projects"}>
-            <Projects />
-          </Route>
-          <Route path={"/about"}>
-            <AboutMe />
-          </Route>
-          <Route path={"/contact"}>
-            <Contact />
-          </Route>
+          <Route exact path={"/"} component={Home} />
+
+          <Route path={"/projects"} component={Projects} />
+
+          <Route path={"/about"} component={AboutMe} />
+
+          <Route path={"/contact"} component={Contact} />
+          <Route path={"/test"} component={Test} />
         </Switch>
 
         <Footer />

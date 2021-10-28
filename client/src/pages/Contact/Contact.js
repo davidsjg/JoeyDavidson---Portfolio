@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { setProject } from "../../actions";
 import OneCard from "../../components/OneCard/OneCard";
 
+import { useNavigate } from "react-router";
+
 import { Container } from "react-bootstrap";
 import { Row } from "react-bootstrap";
 import styles from "./Contact.module.css";

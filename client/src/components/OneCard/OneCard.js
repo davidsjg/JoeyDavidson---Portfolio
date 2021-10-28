@@ -1,6 +1,12 @@
 import React, { useContext, useEffect, useState, useRef } from "react";
+import { browserHistory } from "react-router";
 import { useSelector } from "react-redux";
 import { connect } from "react-redux";
+import { Redirect } from "react-router-dom";
+
+import Home from "../../pages/Home/Home";
+
+import useRoute from "../useRoute/useRoute";
 
 //Bootstrap
 import Container from "react-bootstrap/Container";
@@ -14,6 +20,7 @@ import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 import { FormControl } from "react-bootstrap";
 import { Form } from "react-bootstrap";
+import { Alert } from "react-bootstrap";
 
 import image1 from "./IMG_6490.JPG";
 import styles from "./OneCard.module.css";
@@ -35,9 +42,9 @@ export default function OneCard(props) {
     reply_to: "",
   });
 
-  const userName = useRef();
-  const userEmail = useRef();
-  const userMessage = useRef();
+  let userName = useRef();
+  let userEmail = useRef();
+  let userMessage = useRef();
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -65,7 +72,15 @@ export default function OneCard(props) {
       .catch((err) => {
         console.log("FAILED...", err);
       });
+
+    alert("Email sent succesfully!");
+    return <Redirect from="/contact" to="/home" />;
   };
+
+  function navigateHome() {
+    console.log("inNavigateHome on OneCard, should be redirecting next");
+    return <Redirect to="/home" />;
+  }
 
   const handleChange = (e) => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
@@ -139,11 +154,13 @@ export default function OneCard(props) {
             />
           </Col>
           {/* IF ABOUT ME IS SENT */}
-          {aboutMe === true ? (
+          {aboutMe === true && (
             <Col sm={colSize2} className="aboutMeCol">
               <div className={styles["aboutMeDiv"]}>
                 <h2>WELCOME!</h2>
+                <br />
                 <h4>Thank you for visiting my page! </h4>
+                <br />
                 <br />
                 <h6>
                   I started programming in JavaScript at the beginning of 2021.
@@ -158,12 +175,18 @@ export default function OneCard(props) {
                 </h6>
               </div>
             </Col>
-          ) : (
+          )}
+          {contact === true && (
             <Col sm={colSize2} className="aboutMeCol">
               <h2>Drop me a line....</h2>
               <h4>Feel free to send me an email with questions or comments:</h4>
               <br />
-              <Form onSubmit={onSubmit}>
+              <Form
+                // onSubmit={() => {
+                //   return <Redirect to="/home" />;
+                // }}
+                onSubmit={onSubmit}
+              >
                 <InputGroup className="mb-3">
                   <FormControl
                     placeholder="YourName"
@@ -198,7 +221,7 @@ export default function OneCard(props) {
                     ref={userMessage}
                   />
                 </InputGroup>
-                <Button type="submit" variant="secondary">
+                <Button type="submit" variant="secondary" action={"/home"}>
                   Submit
                 </Button>
               </Form>
