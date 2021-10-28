@@ -103,7 +103,7 @@ export default function OneCard(props) {
                 <h6>
                   I was born and raised in Colorado. I love everything outdoors,
                   especially hiking to fish and camp. I'm an avid Colorado
-                  Avalanche fan and also love to play guitar.
+                  Avalanche fan and love to play guitar.
                 </h6>
               </div>
             </Col>
