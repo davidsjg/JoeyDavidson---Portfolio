@@ -6,10 +6,10 @@ import { setProject } from "../src/actions";
 import "./App.css";
 
 //imported pages
-import Home from "../src/pages/Home";
-import Projects from "../src/pages/Projects";
-import AboutMe from "../src/pages/AboutMe";
-import Contact from "../src/pages/Contact";
+import Home from "../src/pages/Home/Home";
+import Projects from "../src/pages/Projects/Projects";
+import AboutMe from "../src/pages/AboutMe/AboutMe";
+import Contact from "../src/pages/Contact/Contact";
 
 //imported components
 
