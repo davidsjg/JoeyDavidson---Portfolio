@@ -39,6 +39,8 @@ export default function Projects() {
       img: image4,
       class: "CarShare",
       title: "Community Car Share",
+      github: "https://github.com/swhachey/community_car_share",
+      deploy: "https://thawing-reaches-91071.herokuapp.com/",
     },
     {
       id: "2",
@@ -56,6 +58,7 @@ export default function Projects() {
     {
       id: "3",
       variant: "click",
+      Summary: "App for Beaver Frames framing studio - Vail, CO",
       img: image6,
       class: "BeaverFrames",
       title: "Beaver Frames",

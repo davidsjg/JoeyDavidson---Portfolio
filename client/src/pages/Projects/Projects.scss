@@ -107,5 +107,35 @@ body {
 }
 
 .backBody2 {
-  word-wrap: break-word;
+  word-wrap: break-word !important;
+  background-color: red;
+}
+
+.showBack {
+  word-wrap: break-word !important;
+}
+
+.JPW {
+  word-wrap: break-word !important;
+  background-color: red;
+}
+
+.flipCard {
+  word-wrap: break-word !important;
+}
+
+.card-text {
+  word-wrap: break-word !important;
+}
+
+.supYall {
+  word-wrap: break-word !important;
+  width: inherit;
+  font-size: 13px !important;
+  float: left;
+}
+
+.card-body {
+  padding: 10px !important;
+  float: left;
 }

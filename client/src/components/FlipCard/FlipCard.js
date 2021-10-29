@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import cn from "classnames";
 import styles from "./FlipCard.css";
+import { Container } from "react-bootstrap";
 
 function FlipCard({ card }) {
   const [showBack, setShowBack] = useState(false);
@@ -51,43 +52,58 @@ function FlipCard({ card }) {
               backBody3: card.class === "BeaverFrames",
             })}
           >
-            <div
-              className={card.title}
-              className="card-body flipCard d-flex justify-content-center align-items-center"
-            >
-              <p className="card-text ">
-                <div className="card-body d-flex justify-content-center align-items-center">
-                  <h8 className="card-text ">{card.title}</h8>
+            <Container className={"supYall"}>
+              <div
+                className={card.title}
+                className="card-body flipCard d-flex justify-content-center align-items-center"
+              >
+                <div className="card-text ">
+                  <div className="card-body d-flex justify-content-center align-items-center">
+                    <h8 className="card-text ">
+                      <span style={{ fontWeight: "bold" }}>Title: </span>
+                      {card.title}
+                    </h8>
+                  </div>
+                  <div className="card-body d-flex justify-content-center align-items-center">
+                    <h8 className="card-text ">
+                      <span style={{ fontWeight: "bold" }}>Summary: </span>{" "}
+                      {card.Summary}
+                    </h8>
+                  </div>
+                  <div className="card-body d-flex justify-content-center align-items-center">
+                    <h8 className="card-text ">
+                      <span style={{ fontWeight: "bold" }}>Role: </span>
+                      {card.Role}
+                    </h8>
+                  </div>
+                  <div className="card-body d-flex justify-content-center align-items-center">
+                    <h8 className="card-text ">
+                      <span style={{ fontWeight: "bold" }}>Tools: </span>
+                      {card.Tools}
+                    </h8>
+                  </div>
+                  <div className="card-body d-flex justify-content-center align-items-center">
+                    <p className="card-text ">
+                      <span style={{ fontWeight: "bold" }}>
+                        Github Repository:{" "}
+                      </span>{" "}
+                      <a href={card.github} target="_blank">
+                        Github Repository
+                      </a>
+                    </p>
+                  </div>
+                  <div className="card-body d-flex justify-content-center align-items-center">
+                    <p className="card-text ">
+                      <span style={{ fontWeight: "bold" }}>
+                        {" "}
+                        Deployed Live Site:{" "}
+                      </span>{" "}
+                      <a href={card.github}>Deployed Site</a>
+                    </p>
+                  </div>
                 </div>
-                <div className="card-body d-flex justify-content-center align-items-center">
-                  <h8 className="card-text ">{card.Summary}</h8>
-                </div>
-                <div className="card-body d-flex justify-content-center align-items-center">
-                  <h8 className="card-text ">{card.Role}</h8>
-                </div>
-                <div className="card-body d-flex justify-content-center align-items-center">
-                  <h8 className="card-text ">{card.Tools}</h8>
-                </div>
-                <div className="card-body d-flex justify-content-center align-items-center">
-                  <p className="card-text ">
-                    {" "}
-                    <a href={card.github}>Github Repository</a>
-                  </p>
-                </div>
-                <div className="card-body d-flex justify-content-center align-items-center">
-                  <p className="card-text ">
-                    {" "}
-                    <a href={card.deploy}>Deployed Site</a>
-                  </p>
-                </div>
-                {/* <h5>{card.title}</h5>
-                <h5>{card.Summar}</h5>
-                <h5>{card.Role}</h5>
-                <h5>{card.Tools}</h5>
-                <a href={card.github}>Github Repository</a>
-                <a href={card.deploy}>Deployed Site</a> */}
-              </p>
-            </div>
+              </div>
+            </Container>
           </div>
         </div>
       </div>
