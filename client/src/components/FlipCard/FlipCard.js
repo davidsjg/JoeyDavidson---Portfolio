@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import cn from "classnames";
+import styles from "./FlipCard.css";
 
 function FlipCard({ card }) {
   const [showBack, setShowBack] = useState(false);
@@ -12,40 +13,48 @@ function FlipCard({ card }) {
   }
 
   return (
-    <div
-      tabIndex={card.id}
-      className={cn("flip-card-outer", {
-        "focus-trigger": card.variant === "focus",
-      })}
-      onClick={handleClick}
-    >
+    <>
       <div
-        className={cn("flip-card-inner", {
-          showBack,
+        tabIndex={card.id}
+        className={cn("flip-card-outer", {
+          "focus-trigger": card.variant === "focus",
         })}
+        onClick={handleClick}
       >
         <div
           className={cn("card front", {
-            carShare: card.title === "CarShare",
-            JPW: card.title === "JPW",
-            BeaverFrames: card.title === "BeaverFrames",
+            carShareTitle: card.class === "CarShare",
+            jpwTitle: card.class === "JPW",
+            beaverTitle: card.class === "BeaverFrames",
           })}
         >
-          <div className="card-body flipCard d-flex justify-content-center align-items-center">
-            {/* <img src={card.img} class="img-fluid" alt="Responsive image" /> */}
-          </div>
-          {/* <p style={{ textAlign: "center" }}>(click to see more)</p> */}
+          {card.title}
         </div>
-        <div className="card back">
+        <div
+          className={cn("flip-card-inner", {
+            showBack,
+          })}
+        >
           <div
-            className={card.title}
-            className="card-body flipCard d-flex justify-content-center align-items-center"
+            className={cn("card front", {
+              carShare: card.class === "CarShare",
+              JPW: card.class === "JPW",
+              BeaverFrames: card.class === "BeaverFrames",
+            })}
           >
-            <p className="card-text fs-1 fw-bold">{card.back}</p>
+            <div className="card-body flipCard d-flex justify-content-center align-items-center"></div>
+          </div>
+          <div className="card back">
+            <div
+              className={card.title}
+              className="card-body flipCard d-flex justify-content-center align-items-center"
+            >
+              <p className="card-text fs-1 fw-bold">{card.back}</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

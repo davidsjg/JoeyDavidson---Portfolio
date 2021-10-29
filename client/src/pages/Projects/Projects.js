@@ -32,7 +32,8 @@ export default function Projects() {
       front: "Click",
       back: "Back",
       img: image4,
-      title: "CarShare",
+      class: "CarShare",
+      title: "Community Car Share",
     },
     {
       id: "2",
@@ -40,7 +41,8 @@ export default function Projects() {
       front: "Click",
       back: "Back",
       img: image5,
-      title: "JPW",
+      class: "JPW",
+      title: "James Peak Wilderness Lake Finder",
     },
     {
       id: "3",
@@ -48,7 +50,8 @@ export default function Projects() {
       front: "Click",
       back: "Back",
       img: image6,
-      title: "BeaverFrames",
+      class: "BeaverFrames",
+      title: "Beaver Frames",
     },
   ];
 
@@ -59,6 +62,9 @@ export default function Projects() {
       <Container className="mainContain">
         <Row className="bannerRow">
           <LogoBanner />
+          <h8 style={{ textAlign: "center", backgroundColor: "f7f7f7" }}>
+            Click each card for more information!
+          </h8>
         </Row>
         <div className="container">
           <div className="row h-100">
