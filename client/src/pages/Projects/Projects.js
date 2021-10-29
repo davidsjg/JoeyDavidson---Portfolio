@@ -29,8 +29,13 @@ export default function Projects() {
     {
       id: "1",
       variant: "click",
-      front: "Click",
-      back: "Back",
+
+      Summary:
+        "App where users rent and post vehicles for rent within a community",
+      Role: "Created front-end",
+      Tools: "JavaScript, HTML, CSS, Materialize, Handlebars ",
+      https: "//github.com/CommunityCarShare",
+      https: "//thawing-reaches-91071.herokuapp.com/",
       img: image4,
       class: "CarShare",
       title: "Community Car Share",
@@ -38,20 +43,26 @@ export default function Projects() {
     {
       id: "2",
       variant: "click",
-      front: "Click",
-      back: "Back",
       img: image5,
       class: "JPW",
       title: "James Peak Wilderness Lake Finder",
+      Summary:
+        "App designed to visualize fish survey data released by Colorado Parks and Wildlife",
+      Role: "Developed project from creation to completion (Full Stack)",
+      Tools: "React, MongoDB, Context API, JavaScript, HTML, Bootstrap",
+      github: "//github.com/davidsjg/JPW-Fishing-App",
+      deploy: "//fathomless-crag-56888.herokuapp.com/",
     },
     {
       id: "3",
       variant: "click",
-      front: "Click",
-      back: "Back",
       img: image6,
       class: "BeaverFrames",
       title: "Beaver Frames",
+      Role: "Developed project from creation to completion (Full Stack)",
+      Tools: "React, MongoDB, Context API, JavaScript, HTML, Bootstrap",
+      github: "//github.com/davidsjg/JPW-Fishing-App",
+      deploy: "//fathomless-crag-56888.herokuapp.com/",
     },
   ];
 
