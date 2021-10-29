@@ -26,12 +26,15 @@ function FlipCard({ card }) {
       >
         <div className="card front">
           <div className="card-body flipCard d-flex justify-content-center align-items-center">
-            <img src={card.img} class="img-fluid" alt="Responsive image" />
+            {/* <img src={card.img} class="img-fluid" alt="Responsive image" /> */}
           </div>
           <p style={{ textAlign: "center" }}>(click to see more)</p>
         </div>
         <div className="card back">
-          <div className="card-body flipCard d-flex justify-content-center align-items-center">
+          <div
+            className={card.title}
+            className="card-body flipCard d-flex justify-content-center align-items-center"
+          >
             <p className="card-text fs-1 fw-bold">{card.back}</p>
           </div>
         </div>
