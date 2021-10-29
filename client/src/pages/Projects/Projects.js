@@ -6,9 +6,9 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 //CSS
-import styles from "./Projects.module.css";
+// import styles from "./Projects.scss";
 //Components
-
+import FlipCard from "../../components/FlipCard/FlipCard";
 import OneCard from "../../components/OneCard/OneCard";
 import LogoBanner from "../../components/LogoBanner/LogoBanner";
 //Images
@@ -18,6 +18,8 @@ import image3 from "./fish7.PNG";
 // import image4 from "./JD_Image.png";
 
 import HomeContext from "../../utils/HomeContext";
+
+import "./Projects.scss";
 
 export default function Projects() {
   let tempArr = [
@@ -40,6 +42,28 @@ export default function Projects() {
       link: "/projects",
     },
   ];
+
+  const cards = [
+    {
+      id: "1",
+      variant: "hover",
+      front: "Hover",
+      back: "Back",
+    },
+    {
+      id: "2",
+      variant: "click",
+      front: "Click",
+      back: "Back",
+    },
+    {
+      id: "3",
+      variant: "focus",
+      front: "Focus",
+      back: "Back",
+    },
+  ];
+
   const [homeState, setHomeState] = useState({
     dataArr: tempArr,
     currProject: {},
@@ -62,20 +86,19 @@ export default function Projects() {
   return (
     <HomeContext.Provider value={homeState}>
       {/* <button onClick={handleClick}>Click Me</button> */}
-      <Container className={styles["mainContain"]}>
-        <Row className={styles["bannerRow"]}>
+      <Container className="mainContain">
+        <Row className="bannerRow">
           <LogoBanner />
         </Row>
-        <Row>
-          {homeState.dataArr.map((project, index) => {
-            let tempProj = tempArr[index];
-            return (
-              <Col key={project.id} className={styles["colProj"]} sm={4}>
-                <OneCard page="projects" project={project} />
-              </Col>
-            );
-          })}
-        </Row>
+        <div className="container">
+          <div className="row h-100">
+            <div class="col d-flex flex-column flex-md-row justify-content-around align-items-center cardFlip">
+              {cards.map((card) => (
+                <FlipCard key={card.id} card={card} />
+              ))}
+            </div>
+          </div>
+        </div>
       </Container>
     </HomeContext.Provider>
   );
