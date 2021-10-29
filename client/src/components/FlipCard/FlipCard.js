@@ -24,11 +24,17 @@ function FlipCard({ card }) {
           showBack,
         })}
       >
-        <div className="card front">
+        <div
+          className={cn("card front", {
+            carShare: card.title === "CarShare",
+            JPW: card.title === "JPW",
+            BeaverFrames: card.title === "BeaverFrames",
+          })}
+        >
           <div className="card-body flipCard d-flex justify-content-center align-items-center">
             {/* <img src={card.img} class="img-fluid" alt="Responsive image" /> */}
           </div>
-          <p style={{ textAlign: "center" }}>(click to see more)</p>
+          {/* <p style={{ textAlign: "center" }}>(click to see more)</p> */}
         </div>
         <div className="card back">
           <div

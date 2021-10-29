@@ -32,6 +32,7 @@ export default function Projects() {
       front: "Click",
       back: "Back",
       img: image4,
+      title: "CarShare",
     },
     {
       id: "2",
@@ -39,6 +40,7 @@ export default function Projects() {
       front: "Click",
       back: "Back",
       img: image5,
+      title: "JPW",
     },
     {
       id: "3",
@@ -46,22 +48,9 @@ export default function Projects() {
       front: "Click",
       back: "Back",
       img: image6,
+      title: "BeaverFrames",
     },
   ];
-
-  // function setHomeProject(currProject) {
-  //   let dataArr = tempArr;
-
-  //   // setHomeState(dataArr, currProject);
-  // }
-
-  // function handleClick(e) {
-  //   e.preventDefault();
-  //   console.log(homeState);
-  // }
-  // function handleClick2(e) {
-  //   e.preventDefault();
-  // }
 
   return (
     <>
