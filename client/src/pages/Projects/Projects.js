@@ -15,6 +15,9 @@ import LogoBanner from "../../components/LogoBanner/LogoBanner";
 import image1 from "./fish2.PNG";
 import image2 from "./fish1.PNG";
 import image3 from "./fish7.PNG";
+import image4 from "./CarShare.png";
+import image5 from "./JPW.png";
+import image6 from "./ComingSoon.png";
 // import image4 from "./JD_Image.png";
 
 import HomeContext from "../../utils/HomeContext";
@@ -22,69 +25,47 @@ import HomeContext from "../../utils/HomeContext";
 import "./Projects.scss";
 
 export default function Projects() {
-  let tempArr = [
-    {
-      title: "Contact Me",
-      data: "Click to contact me!",
-      img: image1,
-      link: "/contact",
-    },
-    {
-      title: "About Me",
-      data: "Click to learn more about me!",
-      img: image2,
-      link: "/about",
-    },
-    {
-      title: "Portolio Page",
-      data: "Click to view my portfolio page!",
-      img: image3,
-      link: "/projects",
-    },
-  ];
-
   const cards = [
     {
       id: "1",
-      variant: "hover",
-      front: "Hover",
+      variant: "click",
+      front: "Click",
       back: "Back",
+      img: image4,
     },
     {
       id: "2",
       variant: "click",
       front: "Click",
       back: "Back",
+      img: image5,
     },
     {
       id: "3",
-      variant: "focus",
-      front: "Focus",
+      variant: "click",
+      front: "Click",
       back: "Back",
+      img: image6,
     },
   ];
 
-  const [homeState, setHomeState] = useState({
-    dataArr: tempArr,
-    currProject: {},
-  });
+  // function setHomeProject(currProject) {
+  //   let dataArr = tempArr;
 
-  function setHomeProject(currProject) {
-    let dataArr = tempArr;
+  //   // setHomeState(dataArr, currProject);
+  // }
 
-    // setHomeState(dataArr, currProject);
-  }
-
-  function handleClick(e) {
-    e.preventDefault();
-    console.log(homeState);
-  }
-  function handleClick2(e) {
-    e.preventDefault();
-  }
+  // function handleClick(e) {
+  //   e.preventDefault();
+  //   console.log(homeState);
+  // }
+  // function handleClick2(e) {
+  //   e.preventDefault();
+  // }
 
   return (
-    <HomeContext.Provider value={homeState}>
+    <>
+      {/* <HomeContext.Provider value={homeState}> */}
       {/* <button onClick={handleClick}>Click Me</button> */}
       <Container className="mainContain">
         <Row className="bannerRow">
@@ -100,6 +81,7 @@ export default function Projects() {
           </div>
         </div>
       </Container>
-    </HomeContext.Provider>
+      {/* </HomeContext.Provider> */}
+    </>
   );
 }
