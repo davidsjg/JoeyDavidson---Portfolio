@@ -139,7 +139,7 @@ export default function OneCard(props) {
             />
           </Col>
           {/* IF ABOUT ME IS SENT */}
-          {aboutMe === true ? (
+          {aboutMe === true && (
             <Col sm={colSize2} className="aboutMeCol">
               <div className={styles["aboutMeDiv"]}>
                 <h2>WELCOME!</h2>
@@ -158,7 +158,8 @@ export default function OneCard(props) {
                 </h6>
               </div>
             </Col>
-          ) : (
+          )}
+          {contact === true && (
             <Col sm={colSize2} className="aboutMeCol">
               <h2>Drop me a line....</h2>
               <h4>Feel free to send me an email with questions or comments:</h4>
